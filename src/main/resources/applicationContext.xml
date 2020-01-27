@@ -9,4 +9,5 @@
     <bean id="testBean" class="com.sbrf.galina.TestBean">
         <constructor-arg value="Galina"/>
     </bean>
+    <bean id="musicBean" class="com.sbrf.galina.RockMusic"/>
 </beans>
