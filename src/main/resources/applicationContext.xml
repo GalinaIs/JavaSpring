@@ -10,7 +10,7 @@
     <bean id="testBean" class="com.sbrf.galina.TestBean">
         <constructor-arg value="Galina"/>
     </bean>
-    <bean id="musicBean" class="com.sbrf.galina.RockMusic"/>
+    <bean id="musicBean" class="com.sbrf.galina.ClassicalMusic" init-method="doMyInit" destroy-method="doMyDestroy"/>
     <bean id="musicPlayer" class="com.sbrf.galina.MusicPlayer" scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
