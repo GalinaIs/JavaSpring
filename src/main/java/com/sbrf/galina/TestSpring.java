@@ -22,6 +22,8 @@ public class TestSpring {
 
         ClassicalMusic music = context.getBean("musicBean", ClassicalMusic.class);
         System.out.println(music.getSong());
+        ClassicalMusic music1 = context.getBean("musicBean", ClassicalMusic.class);
+        System.out.println(music == music1);
 
         context.close();
     }

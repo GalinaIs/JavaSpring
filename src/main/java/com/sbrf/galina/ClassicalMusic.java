@@ -1,6 +1,13 @@
 package com.sbrf.galina;
 
 public class ClassicalMusic implements Music {
+    private ClassicalMusic() {
+    }
+
+    public static ClassicalMusic getClassicalMusic() {
+        return new ClassicalMusic();
+    }
+
     public void doMyInit() {
         System.out.println("do init");
     }
