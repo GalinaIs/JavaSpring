@@ -20,10 +20,15 @@ public class TestSpring {
         System.out.println(secondMusicPlayer);*/
         //musicPlayer.playMusic();
 
-        ClassicalMusic music = context.getBean("musicBean", ClassicalMusic.class);
+        /*ClassicalMusic music = context.getBean("musicBean", ClassicalMusic.class);
         System.out.println(music.getSong());
         ClassicalMusic music1 = context.getBean("musicBean", ClassicalMusic.class);
-        System.out.println(music == music1);
+        System.out.println(music == music1);*/
+
+        Music music = context.getBean("someRockMusic", Music.class);
+        System.out.println(music.getSong());
+        Music classicalMusic = context.getBean("classicalMusic", Music.class);
+        System.out.println(classicalMusic.getSong());
 
         context.close();
     }

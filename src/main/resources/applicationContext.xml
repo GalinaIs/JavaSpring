@@ -7,13 +7,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="musicPlayer.properties"/>
-    <bean id="testBean" class="com.sbrf.galina.TestBean">
-        <constructor-arg value="Galina"/>
-    </bean>
-    <bean id="musicBean" class="com.sbrf.galina.ClassicalMusic" init-method="doMyInit" destroy-method="doMyDestroy" factory-method="getClassicalMusic"/>
-    <bean id="musicPlayer" class="com.sbrf.galina.MusicPlayer" scope="prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    <context:component-scan base-package="com.sbrf.galina"/>
 </beans>
