@@ -1,13 +1,16 @@
 package com.sbrf.galina;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MusicPlayer {
-    private Music music;
+    @Autowired
+    private RockMusic rockMusic;
+    @Autowired
+    private ClassicalMusic classicalMusic;
     private String name;
     private int volume;
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -17,7 +20,8 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void playMusic() {
-        System.out.println("Playing music on '" + name + "' : " + music.getSong() + " in volume " + volume);
+    public String playMusic() {
+         return "Playing music on '" + name + "' : " + rockMusic.getSong() + " "  +
+                classicalMusic.getSong() + " in volume " + volume;
     }
 }
