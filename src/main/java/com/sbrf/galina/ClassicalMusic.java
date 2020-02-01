@@ -2,6 +2,9 @@ package com.sbrf.galina;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic() {
@@ -20,7 +23,7 @@ public class ClassicalMusic implements Music {
     }
 
     @Override
-    public String getSong() {
-        return "classical song";
+    public List<String> getSongs() {
+        return Arrays.asList("classical song1", "classical song2", "classical song3");
     }
 }

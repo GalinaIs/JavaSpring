@@ -12,7 +12,7 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer{" +
-                "musicPlayer=" + musicPlayer.playMusic() +
+                "musicPlayer=" + musicPlayer.playMusic(MusicType.CLASSICAL) +
                 ", id=" + id +
                 '}';
     }
