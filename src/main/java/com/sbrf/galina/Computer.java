@@ -1,13 +1,14 @@
 package com.sbrf.galina;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Computer {
-    @Autowired
     private MusicPlayer musicPlayer;
     private int id = 1;
+
+    public Computer(MusicPlayer musicPlayer) {
+        this.musicPlayer = musicPlayer;
+    }
 
     @Override
     public String toString() {

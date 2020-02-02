@@ -1,22 +1,11 @@
 package com.sbrf.galina;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.Arrays;
 import java.util.List;
 
-@Component
-@Scope
 public class ClassicalMusic implements Music {
-    private ClassicalMusic() {
-    }
-
-    public static ClassicalMusic getClassicalMusic() {
-        return new ClassicalMusic();
-    }
 
     @PostConstruct
     public void doMyInit() {
